@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="71dbb1cd-86cb-4f9a-bc9a-775a572f6025" activeEnvironment="Default" name="Primeiro" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="8195c7c8-8606-43f7-ae1e-19a442c515fa" wsaVersion="NONE" name="PrimeiroSoap11Binding" type="wsdl" bindingName="{http://exemplos.fiap.com.br}PrimeiroSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/Exemplo2/services/Primeiro?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation id="f65c55df-8b73-4a23-9f3e-c3a6dcf955f1" isOneWay="false" action="urn:ola" name="ola" bindingOperationName="ola" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ac274d37-7923-4917-9192-cda1524b80db" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exem="http://exemplos.fiap.com.br">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <exem:ola>\r
+         <!--Optional:-->\r
+         <exem:nome>?</exem:nome>\r
+      </exem:ola>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ola"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="73a7aa85-08c7-4bec-b013-b833731d5ccd" wsaVersion="NONE" name="PrimeiroSoap12Binding" type="wsdl" bindingName="{http://exemplos.fiap.com.br}PrimeiroSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://localhost:8080/Exemplo2/services/Primeiro?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/Exemplo2/services/Primeiro?wsdl"><con:part><con:url>http://localhost:8080/Exemplo2/services/Primeiro?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://exemplos.fiap.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns="http://exemplos.fiap.com.br" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl">
+  <wsdl:documentation>Um WebService que returna ola.</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://exemplos.fiap.com.br">
+      <xs:element name="ola">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="olaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="olaRequest">
+    <wsdl:part name="parameters" element="ns:ola"/>
+  </wsdl:message>
+  <wsdl:message name="olaResponse">
+    <wsdl:part name="parameters" element="ns:olaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="PrimeiroPortType">
+    <wsdl:operation name="ola">
+      <wsdl:input message="ns:olaRequest" wsaw:Action="urn:ola"/>
+      <wsdl:output message="ns:olaResponse" wsaw:Action="urn:olaResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PrimeiroSoap11Binding" type="ns:PrimeiroPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ola">
+      <soap:operation soapAction="urn:ola" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrimeiroSoap12Binding" type="ns:PrimeiroPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="ola">
+      <soap12:operation soapAction="urn:ola" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PrimeiroHttpBinding" type="ns:PrimeiroPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="ola">
+      <http:operation location="ola"/>
+      <wsdl:input>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="application/xml" part="parameters"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Primeiro">
+    <wsdl:port name="PrimeiroHttpSoap11Endpoint" binding="ns:PrimeiroSoap11Binding">
+      <soap:address location="http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="PrimeiroHttpSoap12Endpoint" binding="ns:PrimeiroSoap12Binding">
+      <soap12:address location="http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap12Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="PrimeiroHttpEndpoint" binding="ns:PrimeiroHttpBinding">
+      <http:address location="http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="c1b2592e-9ea3-436d-a3f4-fbac6ec77e14" isOneWay="false" action="urn:ola" name="ola" bindingOperationName="ola" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68d6f8d9-9958-403b-b80e-3e7d9014aaeb" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/Exemplo2/services/Primeiro.PrimeiroHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:exem="http://exemplos.fiap.com.br">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <exem:ola>\r
+         <!--Optional:-->\r
+         <exem:nome>Marcelo</exem:nome>\r
+      </exem:ola>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ola"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

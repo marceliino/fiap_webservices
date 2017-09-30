@@ -1,0 +1,16 @@
+package br.com.fiap.client;
+
+public class TesteChamada {
+
+	public static void main(String[] args) {
+		
+		Aluno a = new Aluno();
+		a.setNome("MarceloS");
+		a.setTurma("29SCJ");
+		a.setMedia(9.2);
+		
+		AlunoWeb port = new AlunoWebService().getAlunoWebPort();
+		
+		System.out.println(port.novo(a));
+	}
+}

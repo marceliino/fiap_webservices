@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sat Sep 30 10:21:23 BRT 2017
+org.eclipse.jst.jee.server\:Exemplo2Client=D\:\\marceliino\\kit_29scj\\apache-tomcat-9.0.0.M26\\apache-tomcat-9.0.0.M26\\wtpwebapps\\Exemplo2Client
+org.eclipse.jst.jee.server\:Exemplo2=D\:\\marceliino\\kit_29scj\\apache-tomcat-9.0.0.M26\\apache-tomcat-9.0.0.M26\\wtpwebapps\\Exemplo2

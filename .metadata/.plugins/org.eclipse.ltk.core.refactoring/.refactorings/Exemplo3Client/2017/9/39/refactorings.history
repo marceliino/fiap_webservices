@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TesteChamada.java&apos; to &apos;Exemplo3Client/src/br.com.fiap.client&apos;&#x0D;&#x0A;- Original project: &apos;Exemplo3Client&apos;&#x0D;&#x0A;- Destination element: &apos;Exemplo3Client/src/br.com.fiap.client&apos;&#x0D;&#x0A;- Original element: &apos;br.com.fiap.client.TesteChamada.java&apos;" description="Copy compilation unit" destination="/src&lt;br.com.fiap.client" element1="/src&lt;br.com.fiap.client{TesteChamada.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1506790785530" units="1" version="1.0"/>
+</session>

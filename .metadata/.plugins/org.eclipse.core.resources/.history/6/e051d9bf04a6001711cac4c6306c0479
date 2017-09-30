@@ -1,0 +1,12 @@
+package com.fiap.exemplos.ws;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public class AlunoWebDois {
+	@WebMethod
+	public String ola(String nome) {
+		return "Olá " + nome;
+	}
+}

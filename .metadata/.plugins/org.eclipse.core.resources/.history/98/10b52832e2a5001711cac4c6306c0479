@@ -1,0 +1,10 @@
+package br.com.fiap.exemplos;
+
+public class PrimeiroClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

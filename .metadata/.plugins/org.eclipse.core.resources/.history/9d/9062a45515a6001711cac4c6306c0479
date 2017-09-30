@@ -1,0 +1,10 @@
+package br.com.fiap.client;
+
+public class TesteUpload {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+}

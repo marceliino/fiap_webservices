@@ -1,0 +1,9 @@
+package br.com.fiap.client;
+
+public class Chamada {
+
+	public static void main(String[] args) {
+		AlunoWeb port = new AlunoWebService().getAluno
+	}
+
+}

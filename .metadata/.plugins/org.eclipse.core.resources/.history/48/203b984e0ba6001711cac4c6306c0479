@@ -1,0 +1,17 @@
+package br.com.fiap.client;
+
+public class ChamadaObjeto {
+
+	public static void main(String[] args) {
+		AlunoWeb port = new AlunoWebService().getAlunoWebPort();
+		
+		Aluno a = new Aluno();
+		a.setNome("joaquim");
+		
+		Novo parametros = new Novo();
+		parametros.setAluno(a);
+		
+		//port.novo(parameters, usuario, senha);
+	}
+
+}

@@ -1,0 +1,8 @@
+
+public class Chamada {
+
+	public static void main(String[] args) {
+		AlunoWeb port = new Aluno
+	}
+
+}

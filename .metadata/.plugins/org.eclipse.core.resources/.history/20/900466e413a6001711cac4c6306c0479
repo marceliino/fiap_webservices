@@ -1,0 +1,22 @@
+package br.com.fiap.client;
+
+import java.io.FileOutputStream;
+
+public class TesteDownload {
+
+	public static void main(String[] args) {
+		
+		ArquivoWeb port = new ArquivoWebService().getArquivoWebPort();
+		
+		try {
+			byte[] fileBytes = port.download("hilux.jpg");
+			
+			FileOutputStream fos = new FileOutputStream("C:Temp/download.jpg";)
+		} catch (Exception_Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

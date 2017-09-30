@@ -1,0 +1,60 @@
+package com.fiap.exemplos.ws;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
+
+import com.sun.tools.ws.wsdl.document.jaxws.Exception;
+
+
+@WebService
+public class AlunoWeb {
+	
+	@Resource
+	WebServiceContext wsctx;
+	
+	private List<Aluno> alunos = new ArrayList<Aluno>();
+	
+	public AlunoWeb() {
+		alunos = new ArrayList<Aluno>();
+	}
+	
+	public boolean autenticado() {
+		MessageContext mctx = wsctx.getMessageContext();
+		Map http_headers = (Map) mctx.get(MessageContext.HTTP_REQUEST_HEADERS);
+		
+		List usuarios = (List) http_headers.get("Username");
+		List senhas = (List) http_headers.get("Senha");
+		
+		String usuario = usuarios.get(0).toString();
+		String senha = senhas.get(0).toString();
+		
+		if(usuario.equals("fabio") && senha.equals("123")) return true;
+		else return false;
+	}
+	
+	
+	@WebMethod
+	public String novo(Aluno a) {
+		if(this.autenticado()) {
+			this.alunos.add(a);
+			return "Sucesso autenticado";
+		}
+		return "Sem acesso";
+	}
+	
+	@WebMethod
+	public List<Aluno> listar() throws java.lang.Exception {
+		if(this.autenticado()) return this.alunos;
+		else throw new java.lang.Exception("asas");
+		//return this.alunos;
+	}
+
+
+}

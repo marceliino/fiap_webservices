@@ -1,0 +1,5 @@
+#GlassFish 3
+#Sat Sep 30 17:00:52 BRT 2017
+org.eclipse.jst.jee.server\:Exemplo4=D\:\\marceliino\\kit_29scj\\glassfish-4.0\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\Exemplo4
+org.eclipse.jst.jee.server\:Exemplo3=D\:\\marceliino\\kit_29scj\\glassfish-4.0\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\Exemplo3
+org.eclipse.jst.jee.server\:WSAnexos=D\:\\marceliino\\kit_29scj\\glassfish-4.0\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\WSAnexos

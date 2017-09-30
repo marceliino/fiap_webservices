@@ -1,0 +1,15 @@
+package br.com.fiap.client;
+
+import java.io.FileInputStream;
+
+public class TesteUpload {
+
+	public static void main(String[] args) {
+		
+		ArquivoWeb port = new ArquivoWebService().getArquivoWebPort();
+		
+		FileInputStream fis = new FileInputStream(new File("C:/Temp/venus.jpg"));
+		
+
+	}
+}

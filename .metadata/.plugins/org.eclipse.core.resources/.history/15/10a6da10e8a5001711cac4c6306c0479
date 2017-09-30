@@ -1,0 +1,8 @@
+package com.fiap.exemplos.ws;
+
+public class AlunoWeb {
+	
+	public String ola(String nome) {
+		return "Olá " + nome;
+	}
+}

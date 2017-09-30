@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="3">
+    <list key="modules" value0="Exemplo2::org.eclipse.jst.jee.server:Exemplo2::jst.web::2.5" value1="Exemplo2Client::org.eclipse.jst.jee.server:Exemplo2Client::jst.web::3.1"/>
+  </server>
+  <server auto-publish-setting="1" glassfish.adminserverportnumber="4848" glassfish.domainpath="D:\marceliino\kit_29scj\glassfish-4.0\glassfish4\glassfish\domains\domain1" glassfish.serverportnumber="8080" hostname="localhost" id="GlassFish 4 [domain1]" name="GlassFish 4 [domain1]" runtime-id="GlassFish 4" server-type="glassfish.server" server-type-id="glassfish.server" start-timeout="240" stop-timeout="240" timestamp="39">
+    <list key="modules" value0="Exemplo4::org.eclipse.jst.jee.server:Exemplo4::jst.web::3.1"/>
+  </server>
+</servers>

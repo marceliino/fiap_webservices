@@ -1,0 +1,42 @@
+package com.fiap.exemplos.ws;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext;
+import javax.xml.ws.handler.MessageContext;
+
+
+@WebService
+public class AlunoWeb {
+	
+	@Resource
+	WebServiceContext wctx;
+	
+	private List<Aluno> alunos = new ArrayList<Aluno>();
+	
+	public AlunoWeb() {
+		alunos = new ArrayList<Aluno>();
+	}
+	
+	public boolean autenticado() {
+		MessageContext mctx = wctx.getMessageContext();
+		return false;
+	}
+	
+	@WebMethod
+	public String novo(Aluno a) {
+		this.alunos.add(a);
+		return "Sucesso";
+	}
+	
+	@WebMethod
+	public List<Aluno> listar() {
+		return this.alunos;
+	}
+
+
+}
